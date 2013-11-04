@@ -10,38 +10,37 @@
                                                                                 
         <!-- Controller Specific JS/CSS -->
         <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/css/amelia-theme.css" type="text/css">
         <link rel="stylesheet" href="/css/styles.css" type="text/css">
         <?php if(isset($client_files_head)) echo $client_files_head; ?>
                 
 </head>
 
 <body>        
+
+
+        <div class='navbar navbar-default navbar' id='navbar-main'>
+
+                                        <li><a href='/'>Home</a></li>
+                                        
+                                <?php if($user): ?>
+                                        <li><a href='/posts/add'>Add Post</a></li>
+                                        <li><a href='/posts/'>View Posts</a></li>
+                                        <li><a href='/posts/users'>Follow Users</a></li>
+                                        <li><a href='/users/logout'>Logout</a></li>
+                                <?php else: ?>
+                                        <li><a href='/users/signup'>Sign Up</a></li>
+                                        <li><a href='/users/login'>Log In</a></li>
+                                <?php endif; ?>
+                
+
+        </div>
+         <?php if($user): ?>
+                        You are logged in as <?=$user->first_name?>
+                <?php endif; ?>
+        
+
         <div class='container'>
-
-        <?php if($user): ?>
-                You are logged in as <?=$user->first_name?>
-        <?php endif; ?>
-
-        <nav>
-                <menu>
-                                <li><a href='/'>Home</a></li>
-                                
-                        <?php if($user): ?>
-                                <li><a href='/posts/add'>Add Post</a></li>
-                                <li><a href='/posts/'>View Posts</a></li>
-                                <li><a href='/posts/users'>Follow Users</a></li>
-                                <li><a href='/users/logout'>Logout</a></li>
-                        <?php else: ?>
-                                <li><a href='/users/signup'>Sign Up</a></li>
-                                <li><a href='/users/login'>Log In</a></li>
-                        <?php endif; ?>
-                </menu>
-        </nav>
-        
-        
-        
-        <br><br>
-        
         <?php if(isset($content)) echo $content; ?>
 
         <?php if(isset($client_files_body)) echo $client_files_body; ?>
