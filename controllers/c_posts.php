@@ -7,6 +7,7 @@ class posts_controller extends base_controller {
 	public function add() {
         if(!$this->user){ 
             Router::redirect('/users/login');
+        Router::redirect('/users/login');
          }
         else {
 		$this->template = View::instance("v_posts_add");
