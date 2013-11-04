@@ -31,7 +31,7 @@ A email designated to receive messages from the server. Examples:
 	define('SYSTEM_EMAIL', 'bolkunova.o@gmail.com'); 
 
 # Default DB name for this app
-	define('DB_NAME', 'p2_olgalearnscoding_com'); 
+	define('DB_NAME', 'olgalear_p2_olgalearnscoding_com'); 
 
 # Timezone
 	define('TIMEZONE', 'America/New_York');
