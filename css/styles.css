@@ -1,0 +1,19 @@
+h2 {
+
+	color:blue;
+}
+
+li {
+	list-style-type: none;
+	float:left;
+	padding:10px;
+}
+
+/*.form-group {
+	background-color: white;
+	width: 300px;
+}*/
+
+.form-control {
+	width:300px;
+}
