@@ -11,14 +11,23 @@ li {
 li a{
 	color:white;
 }
-.container {
-	margin-top: 40px;
-}
 
 .form-control {
-	width:300px;
+	max-width:500px;
+}
+
+.form-horizontal {
+		margin-left:20px;
 }
 
 .well {
 	margin-bottom: 10px;
+}
+
+.pull-right {
+	float: right;
+}
+
+.jumbotron {
+	min-height:270px;
 }

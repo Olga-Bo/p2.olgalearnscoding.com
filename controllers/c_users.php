@@ -42,6 +42,8 @@ class users_controller extends base_controller {
 
     public function p_login(){
 
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+
         $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
 
 

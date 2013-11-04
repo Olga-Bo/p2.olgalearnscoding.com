@@ -1,5 +1,6 @@
+<div class='well'>
 <h2>Log in</h2>
-<form method='POST' action='/users/p_login' role='form'>
+<form class='bs-example form-horizontal' method='POST' action='/users/p_login' role='form'>
 	<div class="form-group">
 		<label>Email:</label><input type='email' class="form-control" name='email' placeholder="Enter email">
 	</div>
@@ -9,3 +10,4 @@
 	</div>
 <button type='Submit' class="btn btn-default">Log in</button>
 </form>
+</div>
