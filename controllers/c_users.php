@@ -33,14 +33,27 @@ class users_controller extends base_controller {
 
     }
 
-    public function login() {
-    
-        $this->template->content = View::instance('v_users_login');
-        echo $this->template;
+    public function login($error =NULL) {
 
+        if($this->user){
+            Router::redirect('/users/profile');
+        }
+
+        else{
+            #setup the view
+            $this->template->content = View::instance('v_users_login');
+            $this->template->title = "Login";
+
+            # pass error to the view
+            $this->template->content->error = $error; 
+
+            echo $this->template;
+        }
+        
     }
 
     public function p_login(){
+
 
         $_POST = DB::instance(DB_NAME)->sanitize($_POST);
 
@@ -55,15 +68,15 @@ class users_controller extends base_controller {
 
         $token = DB::instance(DB_NAME)->select_field($q);
 
-        #success
-        if($token){
-            setcookie('token',$token, strtotime('+1 year'), '/');
-             Router::redirect('/index/index');
-
+        #fail
+        if(!$token){
+            $error = 'Invalid password';
+             Router::redirect("/users/login/?login-error"); 
         }
-        #Fail
+        
         else {
-            echo "Login failed";
+           setcookie('token',$token, strtotime('+1 year'), '/');
+            Router::redirect('/index/index');
         }
 
     }
