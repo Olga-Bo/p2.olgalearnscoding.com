@@ -2,14 +2,16 @@
 
 class posts_controller extends base_controller {
 
-    if(!$this->user) {
-            Router::redirect("/users/login");
-            #die("Members only. <a href='/users/login'>Login</a>");
-        }
+
 
 	public function add() {
+        if(!$this->user){ 
+            Router::redirect('/users/login');
+         }
+        else {
 		$this->template = View::instance("v_posts_add");
 		echo $this->template;
+        }
 
 	}
 
@@ -27,14 +29,8 @@ class posts_controller extends base_controller {
 
 	public function index() {
 
-         if(!$this->user){ 
-
-            die('Members only. <a href="/users/login">Login</a>');
-
-         }
-
-         else {
-                    # Set up view
+         
+            # Set up view
             $this->template->content = View::instance('v_posts_index');
             
             # Set up query
@@ -59,7 +55,6 @@ class posts_controller extends base_controller {
             
             # Render view
             echo $this->template;
-         }
 
 
 		
