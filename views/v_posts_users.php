@@ -1,11 +1,13 @@
-<?php foreach($users as $user): ?>
+<div class='well'>
+	<h2>Choose users you would like to follow</h2>
+	<?php foreach($users as $user): ?>
 
-	<?=$user['first_name']?> <?=$user['last_name']?><br>
-	<?php if(isset($connections[$user['user_id']])): ?>
-			<a href='/posts/unfollow/<?=$user['user_id']?>'>Unfollow</a>
-	<? else: ?>
-			<a href='/posts/follow/<?=$user['user_id']?>'>Follow</a>
-	<?php endif; ?>
-	<br><br>
+		<h3><?=$user['first_name']?> <?=$user['last_name']?></h3>
+		<?php if(isset($connections[$user['user_id']])): ?>
+				<a href='/posts/unfollow/<?=$user['user_id']?>'><button type="button" class="btn btn-warning">Unfollow</button></a>
+		<? else: ?>
+				<a href='/posts/follow/<?=$user['user_id']?>'><button type="button" class="btn btn-success"> Follow </button></a>
+		<?php endif; ?>
 
-<?php endforeach ?>
+	<?php endforeach ?>
+</div>

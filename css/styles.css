@@ -24,17 +24,31 @@ li a{
 	margin-bottom: 10px;
 }
 
+.well h4 {
+	margin-top:-5px;
+}
+
 .pull-right {
 	float: right;
 }
 
 .jumbotron {
 	min-height:270px;
-	width: 600px;
 }
 
 .error{
 	color: red;
 	font-size: 16px;
 }
+#post {
+	color:black;
+	background-color: rgb(208, 237, 238);
+	border-radius: 4px;
+	font-size: 18px;
+	padding:10px;
+}
+
+.btn {
+	width:100px;
+} 
 
