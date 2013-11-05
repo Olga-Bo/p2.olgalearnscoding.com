@@ -23,6 +23,25 @@ class users_controller extends base_controller {
 
     public function p_signup() {
 
+
+        $_POST = DB::instance(DB_NAME)->sanitize($_POST);
+
+        //Query the DB for a email / password and set it as a variable.
+        $q = "SELECT * FROM users WHERE email = '".$_POST['email']."'";
+
+        //Execute query against DB
+        $exsitingUsers = DB::instance(DB_NAME)->select_rows($q);
+
+
+         if($exsitingUsers > 0){
+                
+            //Redirect to the singup page
+            $error = "User already exists, please login";
+            Router::redirect('/users/signup/$error');
+    
+        //If is doesn't exsit, continue with processing signup.
+        }else{
+
         $_POST['created'] = Time::now();
         $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
         $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
@@ -30,6 +49,7 @@ class users_controller extends base_controller {
         $user_id = DB::instance(DB_NAME)->insert_row('users', $_POST);
 
         Router::redirect('/users/login');
+    }
 
     }
 

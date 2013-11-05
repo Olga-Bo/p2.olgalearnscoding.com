@@ -1,6 +1,12 @@
 
-
 <div class='well'>
+
+    <?php if(isset($error)): ?>
+        <div class='error'>
+            <?php echo $error ?>.
+        </div>
+    <?php endif; ?>
+
 	<h2>Sign up</h2>
 
 <form class="cmxform" id="signupForm" method="POST" action='/users/p_signup' role='form'>
