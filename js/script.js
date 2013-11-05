@@ -1,4 +1,4 @@
-
+var elements;
 
 $(document).ready(function(){
         // highlight 
