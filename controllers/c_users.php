@@ -71,7 +71,7 @@ class users_controller extends base_controller {
         #fail
         if(!$token){
             $error = 'Invalid password';
-             Router::redirect("/users/login/?login-error"); 
+             Router::redirect("/users/login/"); 
         }
         
         else {

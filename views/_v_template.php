@@ -6,8 +6,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        
                                         
         <!-- JS/CSS File we want on every page -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>                                
-                                                                                
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+         <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+         <!--<script type="text/javascript" src="/js/script.js"></script>-->      
+
         <!-- Controller Specific JS/CSS -->
         <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="/css/amelia-theme.css" type="text/css">
