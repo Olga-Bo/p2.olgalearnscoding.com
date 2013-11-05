@@ -57,4 +57,18 @@ $(document).ready(function(){
         }
     });
     
+    $("#addPost").validate({
+        rules: {
+            content: {
+                required : true,
+                maxlength: 200,
+            },
+        },
+        messages: {
+            content: {
+                required: "Please enter your message",
+                maxlength: "Your message should be no longer than 200 signs"
+            },
+        }
+    });
     });

@@ -9,7 +9,7 @@ class posts_controller extends base_controller {
         Router::redirect('/users/login');
          }
         else {
-		$this->template = View::instance("v_posts_add");
+		$this->template->content = View::instance("v_posts_add");
 		echo $this->template;
         }
 
@@ -31,6 +31,7 @@ class posts_controller extends base_controller {
 
          
             # Set up view
+            #$this->template->content->addPost = View::instance('v_posts_add');
             $this->template->content = View::instance('v_posts_index');
             
             # Set up query

@@ -32,7 +32,7 @@
                         <li><a href='/posts/users'>Follow Users</a></li>
                         <li><a href='/users/logout'>Logout</a></li>
                         <?php if($user): ?>
-                                 <h4 class='pull-right'>You are logged in as <?=$user->first_name?></h4>
+                                 <h4 class='pull-right'>You are logged in as <strong><?=$user->first_name?></strong></h4>
                                 <?php endif; ?>
 
                 <?php else: ?>

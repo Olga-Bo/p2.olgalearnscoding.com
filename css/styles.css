@@ -30,8 +30,11 @@ li a{
 
 .jumbotron {
 	min-height:270px;
+	width: 600px;
 }
 
-	.error{
-		color: red;
-		}
+.error{
+	color: red;
+	font-size: 16px;
+}
+
