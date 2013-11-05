@@ -96,7 +96,7 @@ class users_controller extends base_controller {
         
         else {
            setcookie('token',$token, strtotime('+1 year'), '/');
-            Router::redirect('/index/index');
+            Router::redirect('/users/profile');
         }
 
     }

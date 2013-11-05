@@ -23,10 +23,9 @@
         
         <div class='navbar navbar-default navbar' id='navbar-main'>
                 <div class='container'>
-                
-                        <li><a href='/'>Home</a></li>
                         
                 <?php if($user): ?>
+                        <li><a href='/users/profile'>Home</a></li>
                         <li><a href='/posts/add'>Add Post</a></li>
                         <li><a href='/posts/'>View Posts</a></li>
                         <li><a href='/posts/users'>Follow Users</a></li>
@@ -36,6 +35,7 @@
                                 <?php endif; ?>
 
                 <?php else: ?>
+                        <li><a href='/'>Home</a></li>
                         <li><a href='/users/signup'>Sign Up</a></li>
                         <li><a href='/users/login'>Log In</a></li>
                 <?php endif; ?>
