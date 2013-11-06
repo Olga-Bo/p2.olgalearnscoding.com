@@ -11,7 +11,7 @@
 			    <li><a class='btn btn-primary btn-lg' href='/users/login'>Log In</a></li>
 			</div>
 			<div>
-			    <p>+1 Features: Upload a profile photo, delete massage</p>
+			    <p>+1 Features: Upload a profile photo, delete message</p>
 			</div>
 		<?php endif; ?>
 
