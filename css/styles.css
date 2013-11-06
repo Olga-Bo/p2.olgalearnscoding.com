@@ -56,3 +56,13 @@ li a{
 	height:250px;
 	width: 250px;
 }
+
+#update-image {
+	height: 30px;
+	width:250px;
+}
+
+#thumbnail {
+	height: 100px;
+	width: 100px;
+}
