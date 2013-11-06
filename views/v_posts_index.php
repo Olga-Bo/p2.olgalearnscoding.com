@@ -11,9 +11,8 @@
 	</div>
         
     #delete post 
-    <?php if($user->user_id == $post[post_user_id]): ?>
-          <a href=delete/<?=$post['post_id']?>>delete</a>        
-        <?php endif; ?>      
+    <?=$post['content']?><br>
+                        <a href="/posts/delete/<?=$post['post_id']?>">DELETE</a>     
     
 </div>
 <?php endforeach; ?>
