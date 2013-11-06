@@ -3,7 +3,7 @@
 
 
   <form role="form" method='POST' enctype="multipart/form-data" action='/users/profile_update/'>
-                <img class="profile-pic" src="/uploads/avatars/<?= $user->image ?>" alt="<?=$user->first_name . ' ' . $user->last_name ?>">                 
+                <img class="profile-pic" id="avatar" src="/uploads/avatars/<?= $user->image ?>" alt="<?=$user->first_name . ' ' . $user->last_name ?>">                 
                 <div>
                         <label for="avata">Do you want to make some change?</label> 
                         <input type="file" name="avata" id="avata"> 
