@@ -4,30 +4,30 @@ class posts_controller extends base_controller {
 
 
 
-	public function add() {
+        public function add() {
         if(!$this->user){ 
         Router::redirect('/users/login');
          }
         else {
-		$this->template->content = View::instance("v_posts_add");
-		echo $this->template;
+                $this->template->content = View::instance("v_posts_add");
+                echo $this->template;
         }
 
-	}
+        }
 
-	public function p_add() {
+        public function p_add() {
 
-		$_POST['user_id'] = $this->user->user_id;
-		$_POST['created'] = Time::now();
-		$_POST['modified'] = Time::now();
+                $_POST['user_id'] = $this->user->user_id;
+                $_POST['created'] = Time::now();
+                $_POST['modified'] = Time::now();
 
-		DB::instance(DB_NAME)->insert('posts',$_POST);
+                DB::instance(DB_NAME)->insert('posts',$_POST);
                 
         Router::redirect('/posts/');
-		
-	}
+                
+        }
 
-	public function index() {
+        public function index() {
 
          
             # Set up view
@@ -58,10 +58,10 @@ class posts_controller extends base_controller {
             echo $this->template;
 
 
-		
-	}
-	public function users() {
-		# Set up view
+                
+        }
+        public function users() {
+                # Set up view
         $this->template->content = View::instance("v_posts_users");
         
         # Set up query to get all users
@@ -86,9 +86,9 @@ class posts_controller extends base_controller {
         # Render view
         echo $this->template;
 
-	}
+        }
 
-	public function follow($user_id_followed) {
+        public function follow($user_id_followed) {
         
         # Prepare the data array to be inserted
         $data = Array(

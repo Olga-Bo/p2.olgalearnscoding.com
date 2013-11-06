@@ -14,9 +14,6 @@
 					<input name="password" type="password" class="text required form-control" id="password" minlength="4" maxlength="20" />
 				</li>
 
-				<li>
-					<label class="centered info"><a id="forgotpassword" href="#">Email my password...</a></label>
-				</li>
 		</fieldset>
 		
 		<fieldset class="submit">
