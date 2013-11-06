@@ -107,14 +107,14 @@ class posts_controller extends base_controller {
 
      public function unfollow($user_id_followed) {
         
-       # delete this post
-        $where_condition = 'WHERE posts.post_id = '.$post_id;
-
-
-        DB::instance(DB_NAME)->delete('posts', $where_condition);
-
-        # send them back to profile (i.e. refresh)
-        Router::redirect('/users/profile');
+         # Set up the where condition
+            $where_condition = 'WHERE user_id = '.$this->user->user_id.' AND user_id_followed = '.$user_id_followed;
+            
+            # Run the delete
+            DB::instance(DB_NAME)->delete('users_users', $where_condition);
+        
+            # Send them back
+            Router::redirect("/posts/users");
     
     }
         
