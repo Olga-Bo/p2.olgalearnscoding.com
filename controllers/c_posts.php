@@ -118,7 +118,13 @@ class posts_controller extends base_controller {
     
     }
         
-
+     public function delete($post_id) {
+        
+       DB::instance(DB_NAME)->delete('posts','WHERE post_id ='.$post_id);
+       
+       # Send them back to the homepage
+       Router::redirect('/posts');
+    }    
 }
 
 ?>

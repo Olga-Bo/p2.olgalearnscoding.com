@@ -10,5 +10,10 @@
 		<p class="pull-right">posted on <?=Time::display($post['created'])?></p>
 	</div>
         
+    #delete post 
+    <?php if($user->user_id == $post[post_user_id]): ?>
+          <a href=delete/<?=$post['post_id']?>>delete</a>        
+        <?php endif; ?>      
+    
 </div>
 <?php endforeach; ?>

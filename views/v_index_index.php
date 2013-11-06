@@ -10,6 +10,9 @@
 				<li><a class='btn btn-primary btn-lg' href='/users/signup'>Sign Up</a></li>
 			    <li><a class='btn btn-primary btn-lg' href='/users/login'>Log In</a></li>
 			</div>
+			<div>
+			    <p>+1 Features: Upload a profile photo</p>
+			</div>
 		<?php endif; ?>
 
 </div>
