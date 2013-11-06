@@ -30,7 +30,7 @@ class users_controller extends base_controller {
         $q = "SELECT * FROM users WHERE email = '".$_POST['email']."'";
 
         //Execute query against DB
-        $exsitingUsers = DB::instance(DB_NAME)->select_rows($q);
+        $exsitingUsers = DB::instance(DB_NAME)->select_field($q);
 
 
          if($exsitingUsers > 0){
@@ -38,8 +38,7 @@ class users_controller extends base_controller {
             //Redirect to the singup page
             $error = "User already exists, please login";
             Router::redirect('/users/signup/$error');
-    
-        //If is doesn't exsit, continue with processing signup.
+
         }else{
 
         $_POST['created'] = Time::now();

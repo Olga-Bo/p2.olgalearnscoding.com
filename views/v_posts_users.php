@@ -6,7 +6,7 @@
 		<?php if(isset($connections[$user['user_id']])): ?>
 				<a href='/posts/unfollow/<?=$user['user_id']?>'><button type="button" class="btn btn-warning">Unfollow</button></a>
 		<? else: ?>
-				<a href='/posts/follow/<?=$user['user_id']?>'><button type="button" class="btn btn-success"> Follow </button></a>
+				<a href='/posts/follow/<?=$user['user_id']?>'><button type="button" class="btn btn-success">Follow</button></a>
 		<?php endif; ?>
 
 	<?php endforeach ?>
