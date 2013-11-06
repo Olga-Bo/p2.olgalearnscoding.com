@@ -10,9 +10,8 @@
 		<p class="pull-right">posted on <?=Time::display($post['created'])?></p>
 	</div>
         
-    #delete post 
     <?=$post['content']?><br>
-                        <a href="/posts/delete/<?=$post['post_id']?>">DELETE</a>     
+    <a href="/posts/delete/<?=$post['post_id']?>">DELETE</a>     
     
 </div>
 <?php endforeach; ?>
